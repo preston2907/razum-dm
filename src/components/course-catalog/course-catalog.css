@@ -1,0 +1,30 @@
+.catalog .nav-link {
+    cursor: pointer;
+    background-color: lightgrey;
+    margin-bottom: 10px;
+}
+.catalog .nav-link.active {
+    cursor: default;
+    background-color: gold !important; 
+    color: black !important;
+}
+.catalog .nav-link.active:hover {
+    color: black !important;
+}
+.catalog.nav {
+    width: 90%;
+    justify-content: space-around;
+    margin-top: 1rem!important;
+    margin: 0 auto 1rem;
+}
+.catalog a {
+    color: black;
+}
+
+
+@media (max-width:768px) {
+    .nav {
+        width: 100%;
+        justify-content: flex-start;
+    } 
+}

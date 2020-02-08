@@ -1,0 +1,39 @@
+.courses-switcher-item {
+  width: 33.333%;
+  cursor: pointer;
+}
+
+.courses-switcher-item span {
+  font-family: "officina", "OpenSans", sans-serif;
+  font-size: 30px;
+}
+.courses-switcher-main {
+  border-bottom: 1px solid #c5c5c5;
+  height: 60px;
+  width: 750px;
+}
+.courses-switcher-item.active {
+  border-bottom: 5px solid #fbce5d;
+  cursor: default;
+}
+
+h2.part-header {
+  width: 100%;
+    margin-bottom: 40px;
+    font-size: 50px;
+}
+@media (max-width:768px) {
+  .courses-switcher-main {
+    height: 30px;
+    width: auto;
+  }
+
+  .courses-switcher-item span {
+    font-size: 0.9rem;
+  }
+  h2.part-header {
+      margin-bottom: 25px;
+      margin-top: 10px;
+      font-size: 35px;
+  }
+}

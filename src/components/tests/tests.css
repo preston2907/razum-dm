@@ -1,0 +1,29 @@
+.tests-switcher-item {
+  width: 50%;
+  cursor: pointer;
+}
+
+.tests-switcher-item span {
+  font-family: "officina", "OpenSans", sans-serif;
+  font-size: 30px;
+}
+.tests-switcher-main {
+  border-bottom: 1px solid #c5c5c5;
+  height: 60px;
+  width: 500px;
+}
+.tests-switcher-item.active {
+  border-bottom: 5px solid #fbce5d;
+  cursor: default;
+}
+
+@media (max-width:768px) {
+  .tests-switcher-main {
+    height: 30px;
+    width: auto;
+  }
+
+  .tests-switcher-item span {
+    font-size: 1.1rem;
+  }
+}

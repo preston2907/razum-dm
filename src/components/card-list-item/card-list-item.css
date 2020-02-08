@@ -1,0 +1,221 @@
+body {
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+
+.card-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 1px 11px 8px 0 rgba(0, 0, 0, 0.09);
+    background-color: #ffffff;
+}
+
+.card-wiew {
+    position: relative;
+    overflow: hidden;
+    height: 208px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.course-preview {
+    height: 100%
+}
+
+.card-wiew div {
+    position: absolute;
+    top: 17px;
+    padding-top: 4px;
+    padding-left: 2px;
+    padding-right: 10px;
+    width: auto;
+    height: 34px;
+    border-radius: 4px;
+}
+
+.card-wiew .c_progress {
+    background-color: #f5b800;
+}
+
+.card-wiew .c_success {
+    background-color: #6bca6b;
+}
+.card-wiew .c_viewresult {
+    background-color: cadetblue;
+}
+
+.card-wiew .c_assigned {
+    background-color: #989898;
+}
+
+.card-wiew .c_fail {
+    background-color: tomato;
+}
+
+.card-wiew span:first-child {
+    width: 54.6px;
+    height: 13px;
+    opacity: 0.5;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.card-wiew span:nth-child(2) {
+    width: 95px;
+    height: 15px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.card-info {
+    margin-top: 18px;
+    margin-left: 18px;
+}
+
+.card-info .card-level-urgent {
+    width: max-content;
+    height: 34px;
+    border-radius: 17.5px;
+    background-color: #fff1d5;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+.card-info .card-level-urgent span {
+    color: #e2bd74;
+}
+
+.card-time-wrapper {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    color: #989898;
+}
+
+.card-title {
+    margin-top: 9px;
+    width: 309px;
+    height: auto;
+    font-size: 24px;
+    color: #282828;
+}
+
+.card-progress-wrapper {
+    bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-right: 0;
+    align-items: baseline;
+}
+
+.card-progress-wrapper button {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 180px;
+    height: 42px;
+    color: #282828;
+    border-radius: 100px;
+    box-shadow: 0 6px 5px 0 rgba(116, 52, 0, 0.4), 0 4px 0 0 #ffdbab, 0 3px 0 0 #ebb26a;
+    background-image: linear-gradient(to bottom, #f8c25b, #fdd06a);
+    border: none ;
+}
+
+.card-progress-wrapper div {
+    width: 65px;
+}
+.CircularProgressbar {
+    margin-bottom: 15px;
+}
+.CircularProgressbar .CircularProgressbar-path {
+    /* stroke: yellow; */
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.stroke_c_progress {
+    stroke: #f5b800;
+}
+
+.stroke_c_success {
+    stroke: #6bca6b;
+}
+
+.stroke_c_assigned {
+    stroke: #989898;
+}
+
+.stroke_c_fail {
+    stroke: tomato;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+    fill: #585858;
+    font-size: 23px;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
+
+.card-progress-wrapper button:focus {
+    outline: 1px dotted;
+    outline: none;
+}
+
+.card-time-wrapper .course-duration {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .card-wiew {
+        height:120px;
+        
+    }
+    .card-info {
+        margin-left: 0px;
+    }
+    .card-wrapper {
+        min-height: 215px;
+    }
+    .card-info .card-title {
+        font-size: 15px !important;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .card-progress-wrapper {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .card-progress-wrapper div {
+        width: 50%;
+    margin: 0 auto;
+    max-width: 75px;
+}
+    .card-progress-wrapper button {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        min-width: 117px;
+        width: auto;
+        margin: 0 auto 10px auto;
+        border-radius: 25px;
+    }
+    .CircularProgressbar {
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+    .card-date{
+        font-size: 13px;
+        margin-left:5px;
+    }
+    .card-time-wrapper .course-duration {
+        display: none;
+    }
+}
