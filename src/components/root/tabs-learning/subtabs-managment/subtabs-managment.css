@@ -3,6 +3,8 @@ h2.part-header {
     margin-top: 20px;
   margin-bottom: 40px;
   font-size: 50px;
+  font-family: "officina", "OpenSans", sans-serif;
+
 }
 .card-section-title div {
     display: flex;

@@ -21,6 +21,7 @@ h2.part-header {
   width: 100%;
     margin-bottom: 40px;
     font-size: 50px;
+    font-family: "officina", "OpenSans", sans-serif;
 }
 @media (max-width:768px) {
   .courses-switcher-main {

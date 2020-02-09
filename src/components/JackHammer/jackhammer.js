@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-duplicate-props */
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import 'gsap-ssr/TweenMax.js';
 import './css/jackhammer.css';
@@ -35,7 +37,7 @@ class Hammer extends Component {
         let jackBody  = 'translate(0,'+ -jackBodyAmount +')'
         let jackArms = 'translate(0,'+ -jackBodyAmount +')'
         
-        if(frameNumber == 1000)
+        if(frameNumber === 1000)
             frameNumber = 0;
 
         this.setState({

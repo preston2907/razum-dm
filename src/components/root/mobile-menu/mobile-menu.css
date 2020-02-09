@@ -1,0 +1,197 @@
+:root {
+    --screen-width: auto;
+    --screen-height: auto;
+    --header-bg-color: #ffffff;
+    --splash-bg-color: white;
+  }
+  .nav__toggle {
+    display: inline-block;
+    position: absolute;
+    z-index: 10;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    outline: 0;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    border-radius: 0px;
+    transition: background-color 0.15s linear;
+    z-index: 10;
+  }
+
+  .nav__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: var(--screen-height);
+    position: relative;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition:  opacity 0.3s cubic-bezier(0, 0.995, 0.99, 1) 0.3s;
+
+  
+  }
+  .menu__item {
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0, 0.995, 0.99, 1) 0.3s;
+  }
+
+  .nav__link {
+    color: black;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    padding: 1rem;
+  }
+  .nav__link:hover, .nav__link:focus {
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .menuicon {
+    display: block;
+    cursor: pointer;
+    color: black;
+    transform: rotate(0deg);
+    transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .menuicon__bar, .menuicon__circle {
+    fill: none;
+    stroke: black;
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+  .menuicon__bar {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-in-out;
+  }
+  .menuicon__circle {
+    transition: stroke-dashoffset 0.3s linear 0.1s;
+    stroke-dashoffset: 144.513262038;
+    stroke-dasharray: 144.513262038;
+  }
+  .splash {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 1px;
+    height: 1px;
+    z-index: 4;
+  }
+  .splash::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--splash-bg-color);
+    width: 284vmax;
+    height: 284vmax;
+    top: -142vmax;
+    left: -142vmax;
+    transform: scale(0);
+    transform-origin: 50% 50%;
+    transition: transform 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    /* will-change: transform; */
+  }
+  .nav-root:target > .splash::after, .nav--open > .splash::after {
+    transform: scale(1);
+  }
+  .nav-root:target .menuicon, .nav--open .menuicon {
+    color: white;
+    transform: rotate(180deg);
+  }
+  .nav-root:target .menuicon__circle, .nav--open .menuicon__circle {
+    stroke-dashoffset: 0;
+  }
+  .nav-root:target .menuicon__bar:nth-child(1), .nav--open .menuicon__bar:nth-child(1), .nav-root:target .menuicon__bar:nth-child(4), .nav--open .menuicon__bar:nth-child(4) {
+    opacity: 0;
+  }
+  .nav-root:target .menuicon__bar:nth-child(2), .nav--open .menuicon__bar:nth-child(2) {
+    transform: rotate(45deg);
+  }
+  .nav-root:target .menuicon__bar:nth-child(3), .nav--open .menuicon__bar:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  .nav-root:target .nav__menu, .nav--open .nav__menu {
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-root:target .menu__item, .nav--open .menu__item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mobile-menu {
+    height: 5rem;
+    background-color: var(--header-bg-color);
+      box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  }
+  .main {
+    padding: 20px;
+  }
+  .viewport {
+    width: var(--screen-width);
+    height: var(--screen-height);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+  }
+
+  .ars-logo {
+      height: 4rem;
+      margin-top: 0.5rem;
+  }
+
+  .menu-item-header {
+    border-bottom:  solid 1px #d4d4d4;;
+   
+  }
+  .menu-item-header span {
+    font-family: "officina", "OpenSans", sans-serif;
+    font-size: 21px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #282828;
+    padding-bottom: 17px;
+    display: inline-block;
+  }
+  .menu__item {
+    border-bottom-color: rgba(40,40,40,.33);
+    display: inline-block;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+  .menu__item.active {
+    color: #767676;
+    border-bottom: none;
+  }
+  .nav__item {
+    margin-top: 18px;
+  }
+  .nav-root {
+    margin-top: 0px;
+    margin-right: 25px;
+    margin-bottom: 0px;
+    margin-left: 25px;
+  }
+
+  .menu-item {
+    margin-bottom: 20px;
+  }
+.links__menu {
+  margin-bottom: 17px;
+}
+  @media (min-width:768px) {
+    .mobile-menu {
+        display: none;
+    } 
+}

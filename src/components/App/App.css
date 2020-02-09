@@ -1,4 +1,8 @@
-
+.body-container {
+  width: 100%;
+  max-width: 1146px;
+  margin: 0 auto;
+}
 .renderedTab{
   min-height: 65vh;
   padding-left: 1.25rem;
@@ -39,3 +43,20 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: "OfficinaSerifC";  
+  src: url("./fonts/officina-serif-book.woff2") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal;
+   }
+@font-face {
+  font-family: "officina";  
+  src: url("./fonts/officina-serif-book.woff2") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal;
+   }
+
+   .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: 'OfficinaSerifC';
+   }

@@ -135,7 +135,15 @@ export const rootState = {
             type: 'link', //tab,link
             link: 'https://bu-online.beeline.ru/view_doc.html?mode=doc&doc_id=6481957441578098733'
 
-        }
+        },
+        'audit_list' : {
+            id: 4,
+            code: 'audit_list',
+            name: 'ЧЛ Аудита',
+            type: 'link', //tab,link
+            link: 'https://bu-online.beeline.ru/view_doc.html?mode=doc_type&custom_web_template_id=6705784241838580139&doc_id=6298657041915513568'
+
+        },
     }
 
 
