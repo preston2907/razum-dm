@@ -15,7 +15,7 @@
     height: auto;
     font-size: 20px;
     color: #282828;
-    font-family: 'OfficinaSerifC';
+    font-family: 'officina', 'OpenSans', sans-serif;
 }
 
 @media (max-width: 768px){

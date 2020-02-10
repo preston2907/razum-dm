@@ -54,7 +54,7 @@ class Hammer extends Component {
 			<>
             <div class="jackhammer">
                 <div class="svg_holder">
-                    <svg id="jackhammerSVG" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 196.3 276.8" enable-background="new 0 0 196.3 276.8"  preserveAspectRatio="xMidYMax">
+                    <svg id="jackhammerSVG" version="1.1" id="Layer_1" className="layer__1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 196.3 276.8" enable-background="new 0 0 196.3 276.8"  preserveAspectRatio="xMidYMax">
                         <g id="jackhammerMan">
                             <g id="jackBody" transform={ this.state.jackBody}>
                                 <circle class="vestColor" cx="98.2" cy="118.8" r="88.6"/>

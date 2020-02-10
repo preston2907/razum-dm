@@ -1,5 +1,3 @@
-@CHARSET "UTF-8";
-
 
 
 .jackhammer{
@@ -7,7 +5,7 @@
     margin-right: auto;
     margin-top: 50px;
     width:250px;
-
+	height: 352px;
     text-align: center;
 
 }
@@ -82,4 +80,6 @@
 #jackhammer_socialmedia img:hover{
 	opacity: .75;
 }
-
+.layer__1 {
+	height: 350px;
+}

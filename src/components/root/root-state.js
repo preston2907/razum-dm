@@ -137,12 +137,19 @@ export const rootState = {
 
         },
         'audit_list' : {
-            id: 4,
+            id: 5,
             code: 'audit_list',
             name: 'ЧЛ Аудита',
             type: 'link', //tab,link
             link: 'https://bu-online.beeline.ru/view_doc.html?mode=doc_type&custom_web_template_id=6705784241838580139&doc_id=6298657041915513568'
 
+        },
+        'student_list' : {
+            id: 6,
+            code: 'student_list',
+            name: 'Мои ученики',
+            type: 'link', //tab,link
+            link: 'https://bu-online.beeline.ru/view_doc.html?mode=doc_type&custom_web_template_id=6636614815472303945'
         },
     }
 
