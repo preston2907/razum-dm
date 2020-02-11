@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import TitleIcon from '../../../title-icon'
 import './subtabs-managment.css'
 import Spinner from '../../../Spinner';
 import DataRequest from '../../../../services/service.js';
+import DevProgramCard from './devprogram-card'
 
 export default class SubtabsManagment extends Component {
 
@@ -12,7 +14,8 @@ export default class SubtabsManagment extends Component {
         this.dataRequest.getData('getdevprogram', '6790188742141942336').then((resp) => {
             this.setState({
                 devProgramsArr: resp.data,
-                loading: false
+                loading: false,
+                view_mode: 'program-list'
             })
 
         })
@@ -21,8 +24,23 @@ export default class SubtabsManagment extends Component {
     state = {
         loading: true
     }
+
+    ShowProgramCard = (cardid) => {
+
+        this.setState({
+            view_mode: 'program-card',
+            object_id: cardid
+        })
+
+    }
+    goBackClick = () => {
+        this.setState({
+            view_mode: 'program-list'
+        })
+    }
     render() {
 
+        
         if (this.state.loading) {
             return (
                 <>
@@ -31,7 +49,9 @@ export default class SubtabsManagment extends Component {
             )
         } else {
 
+            if (this.state.view_mode === 'program-list') {
 
+            
             let renderedDevProgs = this.state.devProgramsArr.map(elem => {
                 let status_title = '';
                 switch (elem.status) {
@@ -62,7 +82,7 @@ export default class SubtabsManagment extends Component {
                                     Пройти до: {elem.last_date}
                                 </div>
                                 {elem.url !== undefined && (
-                                    <a href={elem.url} target='_blank' rel="noopener noreferrer" className="btn btn-warning dev-prog-img">Перейти</a>
+                                    <a onClick={()=> this.ShowProgramCard(elem.id)}  className="btn btn-warning dev-prog-img">Перейти</a>
                                     )
                                 }
                                     
@@ -86,6 +106,14 @@ export default class SubtabsManagment extends Component {
                     </div>
                 </div>
             )
+            } else {
+                return (
+                    <DevProgramCard 
+                    object_id = {this.state.object_id}
+                    goBackClick = {()=> this.goBackClick()} />
+                )
+
+            }
         }
     }
 }

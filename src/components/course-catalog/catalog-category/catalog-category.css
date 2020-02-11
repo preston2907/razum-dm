@@ -2,7 +2,7 @@
   .mobile {
     display: block;
   }
-  .desktop {
+  .nav-link.desktop, .slick-slider.desktop  {
     display: none;
   }
   .dropdown.mobile .btn {

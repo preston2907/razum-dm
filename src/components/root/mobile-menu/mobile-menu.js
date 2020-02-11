@@ -72,7 +72,7 @@ export default class MobileMenu extends Component {
         </div>
       )
     })
-    console.log(menuItemsArr);
+
 
     let menuClassList = this.state.showmenu ? 'nav-root nav--open' : 'nav-root';
 
