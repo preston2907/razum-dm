@@ -99,7 +99,7 @@
     /* will-change: transform; */
   }
   .nav-root:target > .splash::after, .nav--open > .splash::after {
-    transform: scale(1);
+    transform: scale(2);
   }
   .nav-root:target .menuicon, .nav--open .menuicon {
     color: white;

@@ -49,9 +49,8 @@ export default class SubtabsManagment extends Component {
                         break;
                 }
                 return (
-                    <div className="wraps col-6 col-md-4">
+                    <div className="wraps col-12 col-md-4">
                         <div className="card catalog-card"  >
-                            {/* eslint-disable-next-line */}
 
                             <img className="card-img-top-develop" src={elem.img} alt="Card cap" />
                             <div className="card-body">
@@ -62,8 +61,12 @@ export default class SubtabsManagment extends Component {
                                 <div className='dev-prog-status'>
                                     Пройти до: {elem.last_date}
                                 </div>
-                                {/* eslint-disable-next-line */}
-                                {/* <a href={elem.url} target='_blank' className="btn btn-warning">Перейти</a> */}
+                                {elem.url !== undefined && (
+                                    <a href={elem.url} target='_blank' rel="noopener noreferrer" className="btn btn-warning dev-prog-img">Перейти</a>
+                                    )
+                                }
+                                    
+                                
                             </div>
                         </div>
                     </div>
