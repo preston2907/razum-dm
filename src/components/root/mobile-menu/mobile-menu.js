@@ -6,11 +6,10 @@ import './mobile-menu.css';
 
 export default class MobileMenu extends Component {
 
-  componentDidMount() {
 
-  }
   state = {
-    showmenu: false
+    showmenu: false,
+    isprocessing: false
   }
 
   ShowMenu = (e) => {
@@ -24,33 +23,46 @@ export default class MobileMenu extends Component {
     this.setState({
       showmenu: false
     })
+
   }
+
+
+  menuItemCickHandler = (type, code) => {
+    if (type === "subTab") {
+      this.props.onSubTabClick(code)
+    }
+    else {
+      this.props.onLinkClick(code)
+    }
+
+    this.HideMenu()
+  }
+
   render() {
 
-    let { tabsArr, onSubTabClick, currentSubTab, onLinkClick } = this.props;
+    let { tabsArr, currentSubTab } = this.props;
 
-    console.log(onSubTabClick);
     let menuItemsArr = Object.values(tabsArr).filter((elem) => {
       return elem.type === "tab"
     })
 
-    let menuLinksArr =  Object.values(tabsArr).filter((elem) => {
+    let menuLinksArr = Object.values(tabsArr).filter((elem) => {
       return elem.type === "link"
     })
 
     let renderedMobileMenuLinks = menuLinksArr.map(linkItem => {
       return (
-        <div className='col-6 nav__item' onClick ={() => {this.HideMenu(); onLinkClick(linkItem.link) }} ><span className="menu__item">{linkItem.name}</span></div>
+        <div className='col-6 nav__item' onClick={() => { this.menuItemCickHandler('link', linkItem.link); }} ><span className="menu__item">{linkItem.name}</span></div>
       )
     })
-    
+
     let renderedMobileMenuItems = menuItemsArr.map((menuitem) => {
 
       let renderedMobileMenuSubItems = menuitem.subtabs.map((menuSubItem) => {
         let subItemClassList = menuSubItem.code === currentSubTab ? ' menu__item active' : 'menu__item';
 
         return (
-          <div className='col-6 nav__item' onClick ={() => {this.HideMenu(); onSubTabClick(menuSubItem.code) }} ><span className={subItemClassList}>{menuSubItem.name}</span></div>
+          <div className='col-6 nav__item' onClick={() => { this.menuItemCickHandler('subTab', menuSubItem.code); }} ><span className={subItemClassList}>{menuSubItem.name}</span></div>
         )
 
       })
@@ -84,11 +96,12 @@ export default class MobileMenu extends Component {
         <div id="nav" className={menuClassList} role="navigation">
 
           <div className="nav__menu" id="menu" aria-label="main navigation" >
-          <div className="row links__menu">
-            {renderedMobileMenuLinks}
-          </div>
+            <div className="row links__menu">
+              {renderedMobileMenuLinks}
+            </div>
 
             {renderedMobileMenuItems}
+
           </div>
 
           {/* <!-- MENU TOGGLE BUTTON --> */}
