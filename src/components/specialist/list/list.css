@@ -1,0 +1,28 @@
+.not-manager {
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.spec_head h1{
+    text-align: center;
+}
+.spec_head {
+    margin: 2rem 0px 2rem 0px ;
+}
+.coll_length{
+    color: #d3d3d3;
+}
+h2.sub_header {
+    margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+
+    .spec_head h1 {
+        font-size: 25px;
+    }
+    h2.sub_header {
+        font-size: 20px;
+    }
+
+}

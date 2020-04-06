@@ -1,0 +1,61 @@
+.progress-bar-container {
+  width: 100%;
+  height: 3px;
+  background-color: #efefef;
+  border-radius: 3px;
+
+}
+
+.progress-bar-container .my-progress {
+  height: 100%;
+  border-radius: 3px;
+  
+}
+
+.widget-label {
+  font-family: 'officina', 'OpenSans', sans-serif;
+  font-size: 17px;
+  line-height: 1.47;
+  color: #787878;
+  display: none;
+}
+
+.widget-numbers span {
+  font-family: 'officina', 'OpenSans', sans-serif;
+  line-height: 1.43;
+  color: #282828;
+  
+}
+
+.widget-numbers .big {
+  font-size: 32px;
+}
+
+.widget-numbers .big_string {
+  font-size: 20px;
+  line-height: 45px;
+}
+
+.widget-numbers .small {
+  font-size: 21px;
+}
+
+@media (max-width: 768px) {
+  .widget-main {
+    margin-top: 20px;
+  }
+  .widget-label {
+    display: block;
+    font-size: 15px;
+  }
+  .widget-numbers .big {
+    font-size: 20px;
+  }
+  .widget-numbers .big_string {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .widget-numbers .small {
+    font-size: 15px;
+  }
+}

@@ -9,6 +9,7 @@ import Events from '../events';
 import Tests from '../tests';
 import Usefull from '../usefull'
 import Footer from '../footer'
+import Speclist from '../specialist/list';
 
 
 import DataRequest from '../../services/service.js';
@@ -96,6 +97,10 @@ export default class Root extends Component {
 
             case 'tests':
                 return <Tests />;
+                
+            case 'spec_list':
+                return <Speclist />;
+            
 
             default:
                 return <JackHammer />

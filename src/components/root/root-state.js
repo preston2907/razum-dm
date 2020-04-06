@@ -83,27 +83,27 @@ export const rootState = {
                     isActive: true,
 
                 },
-                {
-                    id: 2,
-                    code: 'spec_courses',
-                    name: 'Курсы',
-                    isActive: false,
+                // {
+                //     id: 2,
+                //     code: 'spec_courses',
+                //     name: 'Курсы',
+                //     isActive: false,
 
-                },
-                {
-                    id: 3,
-                    code: 'spec_trainings',
-                    name: 'Тренинги',
-                    isActive: false,
+                // },
+                // {
+                //     id: 3,
+                //     code: 'spec_trainings',
+                //     name: 'Тренинги',
+                //     isActive: false,
 
-                },
-                {
-                    id: 4,
-                    code: 'spec_posttrainings',
-                    name: 'Посттренинги',
-                    isActive: false,
+                // },
+                // {
+                //     id: 4,
+                //     code: 'spec_posttrainings',
+                //     name: 'Посттренинги',
+                //     isActive: false,
 
-                },
+                // },
                 {
                     id: 5,
                     code: 'spec_development',
@@ -111,13 +111,13 @@ export const rootState = {
                     isActive: false,
 
                 },
-                {
-                    id: 6,
-                    code: 'spec_tests',
-                    name: 'Тесты',
-                    isActive: false,
+                // {
+                //     id: 6,
+                //     code: 'spec_tests',
+                //     name: 'Тесты',
+                //     isActive: false,
 
-                },
+                // },
                 {
                     id: 7,
                     code: 'spec_certificates',
