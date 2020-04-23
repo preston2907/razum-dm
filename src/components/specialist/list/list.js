@@ -64,6 +64,13 @@ export default class List extends Component {
                     return (
                         <>
                             <div className="spec_head"><h1>Обучение специалистов</h1></div>
+
+                            {!this.state.dataObj.in_office && (
+                                <div className="disclaimer"><p>Внимание! На данный момент проходит выгрузка из кадровой системы, Вы видите всех коллег из вашей Группы офисов.<br/> После окончания выгрузки отобразятся все подчиненные.</p></div>
+                            )}
+                            {this.state.dataObj.in_office && (
+                                <div className="disclaimer"><p>Если в списке подчиненных отсутствует часть сотрудников, необходимо подождать. Это означает что идет выгрузка из кадровой базы.</p></div>
+                            )}
                             <div className="row">
 
                                 <TitleIcon title="collab" />

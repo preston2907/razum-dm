@@ -13,7 +13,7 @@ const CatalogCategory = ({ elem, isActive, onSelect ,isMobile  }) => {
 
         <>
             {/* eslint-disable-next-line */}
-            <a className={classes} onClick={onSelect} id="pills-home-tab" role="tab" aria-controls="pills-home" aria-selected="true" href="#">{elem.name}</a>
+            <a className={classes} onClick={onSelect} id="pills-home-tab" role="tab" aria-controls="pills-home" aria-selected="true" >{elem.name}</a>
         </>
 
     )

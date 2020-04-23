@@ -88,20 +88,18 @@ export default class CollabCard extends Component {
                                 <h2 className="sub_header" >Тренинги <span className="coll_length">{showTrainings.length}</span></h2>
                             </div>
                             <div className="row d-none d-md-flex">
-                                <div className="col-md-4">
+                                <div className="col-md-5">
 
                                 </div>
-                                <div className="col-md-8">
+                                <div className="col-md-7">
                                     <div className="row">
-                                        <div className="col-md-4">
+                                        <div className="col-md-6">
                                             Статус
                                     </div>
-                                        <div className="col-md-4">
+                                        <div className="col-md-6">
                                             Дата
                                     </div>
-                                        <div className="col-md-4">
-                                            
-                                    </div>
+
                                     </div>
                                 </div>
                             </div>
