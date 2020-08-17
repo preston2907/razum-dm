@@ -48,6 +48,13 @@ export const rootState = {
 
                 },
                 {
+                    id: 8,
+                    code: 'pir',
+                    name: 'ПиР',
+                    isActive: false,
+
+                },
+                {
                     id: 5,
                     code: 'events',
                     name: 'Тренинги',
